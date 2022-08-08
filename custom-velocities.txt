@@ -1,0 +1,52 @@
+# ; External perimeter
+# {if extrusion_role=~/ExternalPerimeter/};[extrusion_role]
+# SET_VELOCITY_LIMIT ACCEL=1000 ACCEL_TO_DECEL=500 SQUARE_CORNER_VELOCITY=5
+
+# ; Perimeter
+# {elsif extrusion_role=~/Perimeter/};[extrusion_role]
+# SET_VELOCITY_LIMIT ACCEL=2000 ACCEL_TO_DECEL=1000 SQUARE_CORNER_VELOCITY=5
+
+# ; Overhang perimeter
+# {elsif extrusion_role=~/OverhangPerimeter/};[extrusion_role]
+# SET_VELOCITY_LIMIT ACCEL=2000 ACCEL_TO_DECEL=1000 SQUARE_CORNER_VELOCITY=5
+
+# ; Internal infill
+# {elsif extrusion_role=~/InternalInfill/};[extrusion_role]
+# SET_VELOCITY_LIMIT ACCEL=5000 ACCEL_TO_DECEL=2500 SQUARE_CORNER_VELOCITY=5
+
+# ; Top solid infill
+# {elsif extrusion_role=~/TopSolidInfill/};[extrusion_role]
+# SET_VELOCITY_LIMIT ACCEL=2000 ACCEL_TO_DECEL=1000 SQUARE_CORNER_VELOCITY=5
+
+# ; Solid infill
+# {elsif extrusion_role=~/SolidInfill/};[extrusion_role]
+# SET_VELOCITY_LIMIT ACCEL=4000 ACCEL_TO_DECEL=2000 SQUARE_CORNER_VELOCITY=5
+
+# ; Bridge infill
+# {elsif extrusion_role=~/BridgeInfill/};[extrusion_role]
+# SET_VELOCITY_LIMIT ACCEL=5000 ACCEL_TO_DECEL=2500 SQUARE_CORNER_VELOCITY=5
+
+# ; Gap fill
+# {elsif extrusion_role=~/GapFill/};[extrusion_role]
+# SET_VELOCITY_LIMIT ACCEL=2000 ACCEL_TO_DECEL=1000 SQUARE_CORNER_VELOCITY=5
+
+# ; Skirt
+# {elsif extrusion_role=~/Skirt/};[extrusion_role]
+# SET_VELOCITY_LIMIT ACCEL=5000 ACCEL_TO_DECEL= 2500 SQUARE_CORNER_VELOCITY=5
+
+# ; Support material
+# {elsif extrusion_role=~/SupportMaterial/};[extrusion_role]
+# SET_VELOCITY_LIMIT ACCEL=5000 ACCEL_TO_DECEL= 2500 SQUARE_CORNER_VELOCITY=5
+
+# ; Support material interface
+# {elsif extrusion_role=~/SupportMaterialInterface/};[extrusion_role]
+# SET_VELOCITY_LIMIT ACCEL=5000 ACCEL_TO_DECEL= 2500 SQUARE_CORNER_VELOCITY=5
+
+# ; Thin walls
+# {elsif extrusion_role=~/ThinWall/};[extrusion_role]
+# SET_VELOCITY_LIMIT ACCEL=2000 ACCEL_TO_DECEL=1000 SQUARE_CORNER_VELOCITY=5
+
+# ; Other
+# {else};[extrusion_role]
+# SET_VELOCITY_LIMIT ACCEL=4444 ACCEL_TO_DECEL=2222 SQUARE_CORNER_VELOCITY=5
+# {endif}
