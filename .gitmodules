@@ -1,3 +1,5 @@
 [submodule "config"]
 	path = config
 	url = https://github.com/AdamYellen/RatOS-configuration
+	branch = master
+	update = rebase
